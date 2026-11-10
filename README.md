@@ -113,7 +113,7 @@ cp -r futuristic-web-design-skills/skills/futuristic-web-design ~/.claude/skills
 
 Start a new session in your project and ask:
 
-> Which skills do you have available, and when would you use each one?
+> List your installed skills and what triggers each of them.
 
 `futuristic-web-design` should be in the list.
 
@@ -216,7 +216,7 @@ futuristic-web-design-skills/
 - **Small, verified steps.** One section or one change at a time, each looked at in a browser.
 - **One design system.** Two typefaces, five colours, one spacing rhythm, one accent colour, applied everywhere.
 - **Restraint in motion.** Few techniques, placed where they help the visitor understand or feel something.
-- **Phone first.** Every section must work at 390px, and the final check happens on a real device.
+- **Phone first.** Nothing may break at 390px, and the final check happens on a real device.
 - **Safe by default.** Secrets stay in `.env.local`, database tables keep row level security, and nothing is installed or purchased without approval.
 - **Honest reporting.** The agent says what it verified and what it could not.
 
@@ -235,7 +235,7 @@ Only if you have a generation tool connected and you approve the spend. Otherwis
 Yes. Ask for a specific section, a redesign, a mobile pass or a launch check, and the agent starts at that phase.
 
 **Why does it ask questions instead of just building?**
-Because anything left unspecified is filled with the most common answer. If you would rather it did not ask, say "just build it" and it will state its assumptions in a line and continue.
+Because every unanswered question gets a default, and defaults are what make sites look alike. To skip the questions, say "just build it" and it will state its assumptions in a line and continue.
 
 **Why only two cinematic techniques besides the hero video?**
 Each one adds download weight and competes for attention. A page that uses all of them is slower and less memorable than one that uses two well.
