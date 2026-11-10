@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: contact-form-supabase
+expected_outcome: |
+  A working contact form plus SQL that keeps the table write-only for the public, with validation, spam protection, clear success and failure states, and no secret key in the page.
+context:
+  scaffold_script: place-files.sh

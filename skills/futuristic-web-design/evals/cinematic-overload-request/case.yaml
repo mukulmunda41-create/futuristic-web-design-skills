@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: cinematic-overload-request
+expected_outcome: |
+  The portfolio becomes more cinematic without breaking: the cost of stacking every effect is explained, effects are limited or justified, each one has reduced-motion and small-screen fallbacks, heavy code loads lazily, and the existing content survives.
+context:
+  scaffold_script: place-files.sh

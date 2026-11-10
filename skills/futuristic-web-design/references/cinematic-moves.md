@@ -44,6 +44,7 @@ Treat these as part of each technique. Decoration is never allowed to take the p
 - **Small screens.** Swap expensive effects, 3D above all, for a static image under a width breakpoint.
 - **Deferred loading.** Fetch effect code as its section approaches the viewport, never during initial load.
 - **Failure.** If the effect errors out or WebGL is missing, the static image stays and everything else on the page still works.
+- **Truthful figures.** A counter that animates toward a real result must not stop on, or be screenshotted at, a false value ("7% no-shows" on the way to 6%). Animate the presentation, not the data: reveal the final number, or count only when the whole run is visible and quick.
 - **Plan first.** These changes span multiple files. Present a plan, and get approval for each new package.
 - **Versions.** Consult current documentation for the libraries and their compatible versions. Flag uncertainty.
 

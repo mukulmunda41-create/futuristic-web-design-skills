@@ -203,6 +203,7 @@ futuristic-web-design-skills/
 └── skills/
     └── futuristic-web-design/
         ├── SKILL.md                   the workflow and working habits
+        ├── evals/                     three test cases with pass/fail checks
         └── references/
             ├── design-system.md       page anatomy, vocabulary, design directions, rules template
             ├── assets.md              image and video prompts, web preparation
@@ -210,7 +211,7 @@ futuristic-web-design-skills/
             └── ship.md                phone pass, polish, form, deploy, domain, SEO, launch checklist
 ```
 
-`SKILL.md` is loaded whenever the skill triggers. The reference files are loaded only when the agent reaches the phase that needs them, which keeps the agent's context small.
+`SKILL.md` is loaded whenever the skill triggers. The `evals/` folder is never loaded by an agent during normal use; it holds the test cases used to check the skill. The reference files are loaded only when the agent reaches the phase that needs them, which keeps the agent's context small.
 
 ## Design principles
 
@@ -241,6 +242,27 @@ Because every unanswered question gets a default, and defaults are what make sit
 
 **Why only two cinematic techniques besides the hero video?**
 Each one adds download weight and competes for attention. A page that uses all of them is slower and less memorable than one that uses two well.
+
+## Testing
+
+The skill was tested by running three realistic requests twice each, once with the skill and once without, and grading every result against written pass/fail checks.
+
+| Test | With skill | Without skill |
+|---|---|---|
+| A landing page from a one-line request | 8 of 10 | 6 of 10 |
+| A portfolio owner asking for every effect at once | 8 of 8 | 2 of 8 |
+| A contact form saving to Supabase | 8 of 8 | 7 of 8 |
+| **Overall** | **93%** | **58%** |
+
+Each test ran once per configuration, so treat these numbers as a direction rather than a precise measurement. Some checks in the second test reward the skill's own restraint rule, which overstates that gap. With the skill, runs used about 30% more tokens and took about 60% longer, mostly from the phone-width checks and the design-direction step. The gaps found in the skill's own runs (reduced motion missing smooth scrolling, a stray third typeface, a leftover exploration page, unwired buttons) have since been addressed in the skill.
+
+The test cases live in `skills/futuristic-web-design/evals/`. With Claude Code you can run them yourself from that folder:
+
+```bash
+claude plugin eval . --allow-tools Write,Edit,Bash --scaffold
+```
+
+These are real, billed model runs.
 
 ## Contributing
 

@@ -42,7 +42,7 @@ A typical running order: navigation, hero, trust strip, the offer, story or proc
 
 ### 3. Design system
 
-Fix the look a single time for the entire site and record it. Present three candidate directions on a basic preview page, so the choice is made by eye. Each pairs a headline typeface with a reading typeface, assigns five hex colours to roles (page, ink, primary, accent, muted), and sums up its mood in a sentence. Encode the winner in the project's theme tokens.
+Fix the look a single time for the entire site and record it. Present three candidate directions on a basic preview page, so the choice is made by eye. Each pairs a headline typeface with a reading typeface, assigns five hex colours to roles (page, ink, primary, accent, muted), and sums up its mood in a sentence. Encode the winner in the project's theme tokens, then delete the preview page. Exploration pages are scaffolding: if they stay in the project, they ship with the site.
 
 `references/design-system.md` has the detail, the vocabulary and a template.
 
@@ -57,6 +57,7 @@ Reasonable defaults when the project has no opinion yet:
 - Phone first. 390px is the width nothing may break at.
 - Genuine copy only. No lorem ipsum, no "Feature one".
 - Get approval before adding a package, and explain its purpose.
+- Reduced motion means all motion: smooth scrolling, hover and icon transitions included, not only the showpiece effects.
 
 Permanent rules belong in this file. The current task does not.
 
@@ -79,8 +80,11 @@ Asking for a whole page at once returns a page of mediocre sections with no clea
 - A clear lead button: filled, accent-coloured, tied to the brief's action. The secondary action becomes an understated text link. Twin buttons of equal weight signal that no decision was made.
 - Copy positioned clear of the visual's focal subject, decided for desktop and phone independently.
 - For copy over video or photography, solve legibility locally with a gradient scrim under the text. Do not dim the entire visual.
+- Judge the first screen from a screenshot at phone and desktop width. A large empty band, a lone element that reads as clip art, or a visual too dim to make out means the hero is not done, even while the real asset is still a placeholder: the stand-in has to carry the composition until then.
 
-With the page assembled, scroll through it end to end, identify the weakest section (one always is), and propose two alternatives for it on preview routes.
+**Every button goes somewhere.** Each call to action needs a real destination: a store or checkout link, a booking page, a form, an email address. When the destination is unknown, use the nearest honest target (the product section, a mailto link) and list each unwired button in your report. A button that silently scrolls to the same page looks finished and is not.
+
+With the page assembled, scroll through it end to end, identify the weakest section (one always is), and propose two alternatives for it on preview routes. Once one is chosen, delete the other variants and their routes.
 
 ### 6. Visuals
 

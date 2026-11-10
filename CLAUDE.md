@@ -16,6 +16,8 @@ LICENSE                                    MIT; do not change without the owner'
 CLAUDE.md                                  this file
 skills/futuristic-web-design/SKILL.md      workflow and working habits, loaded when the skill triggers
 skills/futuristic-web-design/references/   detail, loaded one file at a time when a phase needs it
+skills/futuristic-web-design/evals/        test cases (prompt.md, case.yaml, graders/, files/) for checking the skill
+skills/*-workspace/                        test results; git-ignored, never commit
 ```
 
 ## Writing rules

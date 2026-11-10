@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aarav Mehta</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; color: #222; background: linear-gradient(135deg, #f5f7ff, #fdf2ff); }
+    header { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; }
+    header a { margin-left: 20px; color: #444; text-decoration: none; }
+    .hero { text-align: center; padding: 120px 20px; }
+    .hero h1 { font-size: 48px; margin: 0 0 16px; }
+    .hero p { font-size: 20px; color: #666; }
+    .btn { display: inline-block; margin: 20px 8px 0; padding: 12px 28px; border-radius: 30px; background: linear-gradient(90deg, #7b5cff, #ff5ca8); color: #fff; text-decoration: none; }
+    .projects { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; padding: 40px; }
+    .card { background: #fff; border-radius: 16px; padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,.08); }
+    .card .thumb { height: 160px; border-radius: 12px; background: #e8e6ff; margin-bottom: 16px; }
+    .about { max-width: 640px; margin: 40px auto; padding: 0 20px; text-align: center; }
+    footer { text-align: center; padding: 40px; color: #888; }
+  </style>
+</head>
+<body>
+  <header>
+    <strong>Aarav Mehta</strong>
+    <nav><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+  </header>
+
+  <section class="hero">
+    <h1>Hi, I'm Aarav 👋</h1>
+    <p>Product designer in Pune. I design calm, useful software for small teams.</p>
+    <a class="btn" href="#work">See my work</a>
+    <a class="btn" href="#contact">Get in touch</a>
+  </section>
+
+  <section class="projects" id="work">
+    <div class="card"><div class="thumb"></div><h3>Ledgerly</h3><p>Redesigned invoicing for a 12-person accounting firm. Invoice time fell from 9 minutes to 3.</p></div>
+    <div class="card"><div class="thumb"></div><h3>Kiln</h3><p>Booking app for a ceramics studio. Took no-shows from 22% to 6% in two months.</p></div>
+    <div class="card"><div class="thumb"></div><h3>Fieldnote</h3><p>Offline-first survey tool used by 300 field researchers across Maharashtra.</p></div>
+  </section>
+
+  <section class="about" id="about">
+    <h2>About</h2>
+    <p>Eight years in product design, the last four freelancing. Before that, design lead at a logistics startup. I care about software that respects people's time.</p>
+  </section>
+
+  <footer id="contact">aarav.mehta.design@example.com · Pune, India</footer>
+</body>
+</html>

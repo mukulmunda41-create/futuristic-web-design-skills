@@ -150,6 +150,9 @@ Confirm each item by looking, not by assuming. Name any you could not confirm.
 - [ ] The accent colour is confined to buttons and the main highlight.
 - [ ] Heading sizes and section gaps are consistent.
 - [ ] Interactive elements react to pointer and keyboard focus.
+- [ ] Every button and link leads to a real destination. Any still unwired is listed for the user.
+- [ ] No preview, variant or design-direction routes remain in the build.
+- [ ] Only the two chosen typefaces render, including in labels, numbers and badges.
 
 **Media**
 - [ ] Hero image near 300 KB or under; remaining images near 150 KB or under; hero clip below 4 MB, silent.
@@ -160,7 +163,7 @@ Confirm each item by looking, not by assuming. Name any you could not confirm.
 **Motion**
 - [ ] Background video hero and a maximum of two further techniques.
 - [ ] Animations are brief, fire a single time and never gate content.
-- [ ] Under reduced motion the page is whole and pin-free.
+- [ ] Under reduced motion the page is whole and pin-free, and nothing moves: no smooth scrolling, no animated icons or transitions.
 - [ ] Small phones get a static image in place of 3D.
 
 **Phone**

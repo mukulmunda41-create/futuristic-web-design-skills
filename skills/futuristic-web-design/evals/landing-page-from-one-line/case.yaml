@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: landing-page-from-one-line
+expected_outcome: |
+  A complete one-page site with a stated brief, one locked design system, a single lead call to action, real copy, motion that respects reduced-motion settings, a phone-width check, and an honest report of assumptions.

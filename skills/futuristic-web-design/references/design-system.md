@@ -117,10 +117,11 @@ Constraints
 
 ## Keeping the page calm
 
-1. No hex values in components that are not in the palette.
-2. A single vertical rhythm from section to section.
-3. A single corner radius.
-4. A single accent, rationed. When it marks only the things worth clicking, attention goes there without effort. If several accent-coloured buttons compete inside one section, demote all but one.
+1. Two typefaces and no more. Framework default stacks count: Tailwind's `font-mono` or `font-serif` used for step numbers, labels or badges quietly adds a third family. Point those utilities at the two tokens, or do not use them.
+2. No hex values in components that are not in the palette.
+3. A single vertical rhythm from section to section.
+4. A single corner radius.
+5. A single accent, rationed. When it marks only the things worth clicking, attention goes there without effort. If several accent-coloured buttons compete inside one section, demote all but one.
 
 ## Everyday motion
 
@@ -130,6 +131,21 @@ Sort out the ordinary motion before reaching for anything cinematic. It should b
 - Durations stay below 500ms. Entrance animations fire a single time, not on every pass. Content never depends on an animation finishing.
 - Respect `prefers-reduced-motion`; with it set, elements are simply present.
 - Interactive elements show hover and keyboard-focus states.
+
+Reduced motion has to cover everything that moves, not only the effects you think of as animation. Smooth scrolling, accordion and menu-icon rotations and hover transitions are the ones usually missed. Put a global rule in the base stylesheet so nothing slips through:
+
+```css
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+```
+
+Script-driven motion (scroll handlers, GSAP, canvas loops) does not obey CSS and needs its own check of `matchMedia("(prefers-reduced-motion: reduce)")`.
 
 Motion only draws the eye when most of the page is still. If in doubt, delete an animation.
 
