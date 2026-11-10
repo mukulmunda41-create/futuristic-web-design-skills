@@ -18,6 +18,7 @@ It works with any agent that reads the open `SKILL.md` format, including **Claud
 - [Design principles](#design-principles)
 - [FAQ](#faq)
 - [Contributing](#contributing)
+- [License](#license)
 
 ## The problem it solves
 
@@ -197,6 +198,7 @@ The agent asks before installing any package or tool.
 ```
 futuristic-web-design-skills/
 ├── README.md
+├── LICENSE                            MIT
 ├── CLAUDE.md                          rules for agents editing this repository
 └── skills/
     └── futuristic-web-design/
@@ -243,3 +245,7 @@ Each one adds download weight and competes for attention. A page that uses all o
 ## Contributing
 
 Issues and pull requests are welcome. Before opening a pull request, read `CLAUDE.md` for the editing rules: English only, original wording, a lean `SKILL.md`, and self-contained reference files.
+
+## License
+
+Released under the [MIT License](LICENSE). You are free to use, copy, modify and redistribute this skill, including commercially, as long as the copyright notice and license text are kept.

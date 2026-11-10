@@ -12,6 +12,7 @@ The repository is documentation only. There is no application code, no build ste
 
 ```
 README.md                                  for people: what it is, install, usage
+LICENSE                                    MIT; do not change without the owner's approval
 CLAUDE.md                                  this file
 skills/futuristic-web-design/SKILL.md      workflow and working habits, loaded when the skill triggers
 skills/futuristic-web-design/references/   detail, loaded one file at a time when a phase needs it
