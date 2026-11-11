@@ -1,0 +1,25 @@
+---
+description: Checks to apply when building or restyling a page section, or adding scroll, video or 3D effects.
+globs: components/**/*,app/**/*
+alwaysApply: false
+---
+# Sections and cinematic effects
+
+Full routines: `.agents/skills/new-section/SKILL.md` for a section, `.agents/skills/cinematic-3d-scroll/SKILL.md` for scroll, video and 3D. Read the one that fits before editing. The points below are the ones most often skipped.
+
+## Any section
+- Read the Design section of `AGENTS.md` first. Palette colours and the two typefaces only.
+- Real copy. Ask for facts (prices, claims, quotes); never invent customers, reviews or statistics.
+- One component per file under `components/`.
+- One lead button per section, with a real destination. List any unwired button in the report.
+- Check at 390px, 768px and 1440px in a browser: no horizontal scroll, tap targets of about 44px, nothing against the screen edge, card prices and buttons on one line.
+- Layout options go on preview routes, and those routes are deleted once one is chosen.
+- Report in three lines: what was built, the file, what needs the user's eyes.
+
+## Scroll, video and 3D
+- Budget: a background video hero plus at most two other techniques. Say what each adds and costs before coding.
+- Under `prefers-reduced-motion`: no pinning, no scrubbing, no 3D download, no smooth scrolling.
+- Below 768px, or if WebGL fails, show a still image in place of 3D.
+- Load effect code only as its section nears the viewport.
+- Ask before installing GSAP, Three.js or Lenis, and check current documentation for compatible versions.
+- Afterwards, report the transfer size before and after.

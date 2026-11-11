@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Saffron Street</title>
+  <style>
+    body { margin: 0; font: 17px/1.6 Georgia, serif; color: #241c15; background: #fbf6ee; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+    section { padding: 88px 0; }
+    img { width: 100%; height: auto; display: block; }
+    a.btn { display: inline-block; background: #b4441c; color: #fff; padding: 14px 24px; text-decoration: none; }
+    a:hover { opacity: 0.9; }
+  </style>
+</head>
+<body>
+  <section><div class="wrap">
+    <img src="images/hero.png" />
+    <h1>Coastal Maharashtrian food, cooked the slow way</h1>
+    <p>A forty-seat restaurant on Hill Road, Bandra West. Open for lunch and dinner, closed Mondays.</p>
+    <a class="btn" href="tel:+912200000000">Book a table</a>
+  </div></section>
+  <section><div class="wrap">
+    <h2>The Sunday thali</h2>
+    <img src="images/thali.png" alt="image 1" />
+    <p>Eleven dishes that change every week, Rs 950.</p>
+  </div></section>
+  <section id="contact"><div class="wrap">
+    <h2>Write to us</h2>
+    <form id="f"><input name="email" type="email" required /><textarea name="message" required></textarea><button>Send</button></form>
+  </div></section>
+  <script>
+    const SUPABASE_URL = "https://example-project.supabase.co";
+    const SUPABASE_SERVICE_ROLE_KEY = "TEST-ONLY-NOT-A-REAL-KEY-service-role";
+  </script>
+</body>
+</html>

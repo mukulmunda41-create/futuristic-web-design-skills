@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: launch-readiness-audit
+expected_outcome: |
+  The site is made launch ready without deploying: the leaked secret key is removed and flagged for rotation, .env.local is git-ignored, images are converted within the size targets with a before and after table, alt text is descriptive, and the title, description, share card, sitemap and robots file are in place.
+context:
+  scaffold_script: place-files.sh

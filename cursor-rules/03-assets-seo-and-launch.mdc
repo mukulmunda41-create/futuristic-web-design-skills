@@ -1,0 +1,27 @@
+---
+description: Targets and checks for media files, search and sharing metadata, and going live.
+globs: public/**/*,app/layout.*,next.config.*
+alwaysApply: false
+---
+# Assets, SEO and launch
+
+Full routine: `.agents/skills/web-assets-and-launch/SKILL.md`. Read it before preparing media, auditing, or deploying. The targets below must match it.
+
+## Media in `public/images/` (Next.js) or `images/` next to the page (plain HTML)
+- Ask before installing `ffmpeg` or `sharp`.
+- Hero image: WebP, at most 1920px wide, roughly 300 KB.
+- Other images: WebP, at most about 1000px wide, roughly 150 KB.
+- `hero.mp4`: at most 1080p, audio removed, below 4 MB. Its opening frame is saved as `hero-poster.webp`.
+- Everything below the first screen is lazy-loaded, and alt text describes the picture.
+- Report a table of sizes before and after.
+
+## Search and sharing
+- Title of at most 60 characters and description of at most 155, stating what is sold and where.
+- Share image of 1200x630 at `public/images/share.webp`.
+- Favicon, sitemap and robots file, with the production domain set as the base URL.
+
+## Before going live
+- `.env.local` is git-ignored, and no secret key is in the code or the git history. A secret that was ever in page code or a commit must be rotated, even if nothing was pushed.
+- No preview routes remain.
+- Deploy only when asked. Enter the `.env.local` values in the host's settings.
+- Verify on the production URL from a phone, and confirm a form submission creates a row.

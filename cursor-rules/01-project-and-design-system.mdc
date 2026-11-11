@@ -1,0 +1,19 @@
+---
+description: Where the project rules, design system and skills live. Applies to every request.
+globs:
+alwaysApply: true
+---
+# Project and design system
+
+The project rules and the design system (two typefaces, five palette colours, constraints) are in `AGENTS.md` at the project root. Follow that file. Do not restate or override its values here; changes to the look happen in `AGENTS.md` and the theme tokens, nowhere else.
+
+The detailed method is in skill folders under `.agents/skills/`. Read the matching `SKILL.md` before starting:
+
+| Task | Skill |
+|---|---|
+| A new site, a redesign, or "it looks generic" | `futuristic-web-design` |
+| One section, or layout options to compare | `new-section` |
+| Scroll animation, a pinned section, parallax, 3D, scroll-driven video | `cinematic-3d-scroll` |
+| Media, image prompts, polish, speed, keys, SEO, launch | `web-assets-and-launch` |
+
+If `AGENTS.md` or the skill folders are missing, say so and offer to install them: `npx skills add mukulmunda41-create/futuristic-web-design-skills`

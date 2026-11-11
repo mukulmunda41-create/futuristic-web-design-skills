@@ -101,7 +101,7 @@ When a save fails, read the error and correct the policy. Disabling row level se
 - Public keys may ship in the site. Secret (service) keys unlock the full account and must stay out of client code entirely.
 - All keys sit in `.env.local`, and `.gitignore` lists that file.
 - Keys never appear in screenshots, recordings or chat.
-- Once a secret has been pushed, it is compromised. Deleting it later does not help, since git history retains it. Have the user rotate it from the provider's dashboard.
+- Once a secret has been served in page code or committed to git, it is compromised, even if the repository was never pushed: visitors could read the page, and the history travels with every copy and every future push. Deleting it later does not help. Have the user rotate it from the provider's dashboard.
 
 Before every push, verify that `.env.local` is ignored and that neither the code nor the history contains a secret.
 

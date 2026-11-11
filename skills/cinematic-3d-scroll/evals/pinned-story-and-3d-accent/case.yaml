@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: pinned-story-and-3d-accent
+expected_outcome: |
+  A pinned three-step scroll story and one procedural 3D accent are added with the guardrails: a stacked layout under reduced motion, a still fallback on small screens and without WebGL, 3D code that loads lazily, content readable without JavaScript, and a report of the added weight and what was not tested.
+context:
+  scaffold_script: place-files.sh
